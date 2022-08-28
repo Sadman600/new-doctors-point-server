@@ -59,6 +59,7 @@ async function run() {
             const result = await userCollection.updateOne(filter, updateDoc);
             res.send(result);
         });
+        
         app.put('/user/:email', async (req, res) => {
             const email = req.params.email;
             const user = req.body;
